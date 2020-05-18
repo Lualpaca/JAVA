@@ -1,0 +1,22 @@
+
+package formacion_adsi;
+
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Sammy Guergachi <sguergachi at gmail.com>
+ */
+public class Funciones_Entrada {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //Función GUI para leer datos
+        String nombre=JOptionPane.showInputDialog("Digita tu Nombres");
+        //Función GUI para salida de datos
+        JOptionPane.showConfirmDialog(null, "Su nombres es: "+nombre);
+    }
+    
+}
