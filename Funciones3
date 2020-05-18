@@ -1,0 +1,37 @@
+package formacion_adsi;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Sammy Guergachi <sguergachi at gmail.com>
+ */
+public class Funciones_Suma {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        //Declaración de Objetos
+        int numero1=0, numero2=0;
+        float numero3;
+        boolean estado=true;
+        char letra='t';
+        long num_largo;
+        
+        InputStream st= System.in; // Declarar objeto para lectutra de datos (in/out)
+        Scanner sc= new Scanner(st);
+        
+        System.out.println("Digita el Primer valor: ");
+        numero1=sc.nextInt();
+        
+        System.out.println("Digita el Segundo valor: ");
+        numero2=sc.nextInt();
+        
+        System.out.println("La Suma de los valores es: "+(numero1+numero2));
+        
+                
+    }
+    
+}
