@@ -1,0 +1,28 @@
+package formacion_adsi;
+import java.io.InputStream;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Luis Alberto Pava <lpava@sena.edu.co>
+ */
+public class Formacion_ADSI {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        //System.out.println("Hola Mundo desde JAVA !!");
+                
+        InputStream st= System.in; // Declarar objeto para lectutra de datos (in/out)
+        Scanner sc= new Scanner(st);
+        
+        System.out.print("Digita tu nombre: ");
+        String nombre=sc.next();
+        
+        System.out.println("Bienvenido al Sistema: "+nombre);
+        
+    }
+    
+}
