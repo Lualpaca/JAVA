@@ -1,0 +1,45 @@
+package formacion_adsi;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Sammy Guergachi <sguergachi at gmail.com>
+ */
+public class Sesion_25 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         int Numero1;
+         float Numero2;
+         String Nombre, Numero3;
+         boolean estado=true;
+         long NumeroLargo;
+         
+         InputStream st= System.in; // Declarar objeto para lectutra de datos (in/out)
+         Scanner sc= new Scanner(st);
+         
+         System.out.print("Digite su Nombre: ");
+         Nombre=sc.next();
+         
+         System.out.print("Digite el Primer valor: ");
+         Numero1=Integer.parseInt(sc.next());
+         
+         System.out.print("Digite el Segundo valor: ");
+         Numero2=Float.parseFloat(sc.next());
+         //estado=false;
+         
+         System.out.print("Digite el Tercer valor: ");
+         NumeroLargo=Integer.parseInt(sc.next());
+         
+         System.out.println("Su Nombre es: "+Nombre+
+                            "\nValor 1: "+Numero1 + 
+                            "\nValor 2: "+Numero2 +
+                            "\nEstado: "+estado+
+                            "\nNumero Largo: "+NumeroLargo);
+    }
+    
+}
