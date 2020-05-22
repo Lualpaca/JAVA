@@ -1,0 +1,72 @@
+/*
+ Definir el día de la semana de acuerdo al número registrado por teclado: 1->Lunes, 2->Martes ....
+ */
+package formacion_adsi;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Luis Pava
+ */
+public class Sesion_27 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int dia, num, x=0;
+
+         InputStream entrada= System.in; // Declarar objeto para lectutra de datos (in/out)
+         Scanner lector= new Scanner(entrada);
+
+        System.out.print("Digite el Valor del día: ");
+        dia=Integer.parseInt(lector.next());
+        
+        switch(dia){
+            case 1: System.out.println("El día es Lunes.");
+            break;
+            
+            case 2: System.out.println("El día es Martes.");
+            break;
+            
+            case 3: System.out.println("El día es Miércoles.");
+            break;
+            
+            case 4: System.out.println("El día es Jueves.");
+            break;
+            
+            case 5: System.out.println("El día es Viernes.");
+            break;
+            
+            case 6: System.out.println("El día es Sabado.");
+            break;
+            
+            case 7: System.out.println("El día es Domingo.");
+            break;
+            
+            default: System.out.println("Número Invalido !!");
+        
+        }
+        
+        //Calcular la tabla de multiplicación de un número
+        System.out.print("Digite el Valor a Conocer la Tabla de Multiplicar: ");
+        num=Integer.parseInt(lector.next());
+        
+        System.out.println("Resultado con el ciclo while:");
+        while (x<10) {            
+            System.out.println(num+" * "+ x +" = "+(num*x));
+            x++;
+        }
+        
+        //Uso del Ciclo For
+        System.out.println("Resultado con el ciclo for:");
+        for (int i = 0; i < 10; i++) {
+            System.out.println(num+" * "+ i +" = "+(num*i));
+        }
+             
+    }
+    
+}
