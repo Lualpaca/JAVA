@@ -1,0 +1,55 @@
+/*
+ Programa que Calcule el promedio de edad de N asistentes a una integración. Debe mostrar el promedio de hombres y mujeres.
+ Limitar el acceso solo para 3 integrantes.
+*/
+package formacion_adsi;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Luis Pava
+ */
+public class Sesion_28 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        int cantidad=0, sexo,contHombres = 0, contMujeres = 0, acumEdadHombres = 0,acumEdadMujeres = 0, edad, limite=3;
+        
+        InputStream st= System.in; // Declarar objeto para lectutra de datos (in/out)
+        Scanner sc= new Scanner(st);
+        
+        System.out.print("Digite la Cantidad de Asistentes: ");
+        cantidad=sc.nextInt();
+        
+        
+        for (int i = 1; i <= cantidad; i++) {
+            
+            if(i==limite){
+                System.out.print("Cupo Completado, vuelva pronto ... ");
+                break;
+            }else{
+                System.out.print("Para registro "+ i+", digite: 1. Hombre. 2. Mujer ");
+                sexo=sc.nextInt();
+            
+                if (sexo==1) {
+                    System.out.print("Sr. Digite su Edad: ");
+                    edad=sc.nextInt();
+                    contHombres++;
+                    acumEdadHombres+=edad;
+                } else {
+                    System.out.print("Sra. Digite su Edad: ");
+                    edad=sc.nextInt();
+                    contMujeres++;
+                    acumEdadMujeres+=edad;
+                }
+            }
+        }
+        System.out.println("Promedio Hombres: "+(acumEdadHombres/contHombres));
+        System.out.println("Promedio Mujeres: "+(acumEdadMujeres/contMujeres));
+    }
+}
